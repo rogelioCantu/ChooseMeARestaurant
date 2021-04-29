@@ -1,10 +1,18 @@
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-function App() {
-  return (
-    <div className="App">
-        <h1>Making some basic game with React, Redux, and SVG!</h1>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return(
+            <div className="App">
+                <h1>{this.props.message}</h1>
+            </div>
+        );
+    }
 }
+
+App.propTypes = {
+    message: PropTypes.string.isRequired,
+};
 
 export default App;
